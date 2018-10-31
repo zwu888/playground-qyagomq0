@@ -1,19 +1,24 @@
-# Welcome!
-
-This C++ template lets you get started quickly with a simple one-page playground.
+# description: 
+ Any construct that could possibly be considered a declaration is a declaration.  In this example, the second line of main is interpreted as a function declaration in preference to an object declaration with initialization.
 
 ```C++ runnable
 #include <iostream>
 
-using namespace std;
+struct Foo
+{
+  Foo(int d) : x(d) {}
+  int x;
+};
 
 int main() 
-{
-    cout << "Hello, World!";
-    return 0;
-}
+{ 
+  double x = 3.14;
+
+  Foo f( int(x) );
+
+  std::cout << f.x << std::endl;
+
+  return 0;
+} 
 ```
 
-# Advanced usage
-
-If you want a more complex example (external libraries, viewers...), use the [Advanced C++ template](https://tech.io/select-repo/598)
